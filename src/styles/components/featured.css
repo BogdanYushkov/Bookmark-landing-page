@@ -1,0 +1,148 @@
+.features {
+    text-align: center;
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.features::before {
+    position: absolute;
+    content: '';
+    background-color: var(--just-blue);
+    height: 320px;
+    width: 600px;
+    border-radius: 100px;
+    top: 50%;
+    left: 0;
+    z-index: -10;
+    transform: translateX(-40%);
+}
+
+.features img {
+    max-width: 100%;
+}
+
+.features__headline {
+    max-width: 500px;
+    margin: auto;
+}
+
+.features__headline h3 {
+    text-transform: capitalize;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.features h4 {
+    text-transform: capitalize;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.features p {
+    color: gray;
+}
+
+.features__slides__slide__controls {
+    margin-top: 60px;
+
+}
+
+.features__slides__slide__controls ul {
+    display: flex;
+    justify-content: center;
+    flex-direction:  row;
+    gap: 15px;
+    text-transform: capitalize;
+    margin-bottom: 60px;
+}
+
+.features__slides__slide__controls li {
+    position: relative;
+    border-bottom: 1px solid rgba(73, 93, 207, 0.20012);
+    padding: 15px 25px;
+    cursor: pointer;
+}
+
+.s-control.is-active {
+    color: #fa5959;
+}
+
+.features__slides__slide__controls li.is-active {
+    display: block;
+}
+
+.features__slides__slide__controls li:active {
+    transform: scale(0.98);
+}
+
+.features__slides__slide__controls li.is-active::before {
+    position: absolute;
+    content: '';
+    block-size: 4px;
+    width: 100%;
+    background-color:#fa5959 ;
+    left: 0;
+    bottom: 0;
+
+}
+
+.features__slides__slide__content {
+    padding: 0 40px;
+}
+
+
+/* slides  */
+
+
+.slide {
+    display: none;
+}
+
+.slide.is-active {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.slide__description {
+    text-align: start;
+    margin-top: 40px;
+}
+
+.slide .btn {
+    margin-top: 10px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .features::before {
+        height: 250px;
+        width: 500px;
+    }
+
+    .features__slides__slide__controls ul {
+        flex-direction:  column;
+    }
+
+    .s-control {
+        min-width: 80%;
+        margin: 0 auto;
+    }
+
+    .slide.is-active {
+        grid-template-columns: 1fr;
+    }
+
+    .slide__description {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .features::before {
+        height: 200px;
+        width: 400px;
+    }
+}
+

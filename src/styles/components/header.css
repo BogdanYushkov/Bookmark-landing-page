@@ -1,0 +1,31 @@
+
+.header {
+    position: sticky;
+    padding: 30px 30px;
+    top: 0;
+    background: var( --just-white);
+    z-index: 10;    
+}
+
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;    
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .icon {
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 1184px) {
+    .header__content {
+        justify-content:space-around;
+    }
+    
+}

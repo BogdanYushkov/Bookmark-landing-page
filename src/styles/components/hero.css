@@ -1,0 +1,86 @@
+.hero {
+    position: relative;
+    padding: 20px;
+    overflow: hidden;
+    padding-bottom: 80px;
+}
+
+.hero::before {
+    position: absolute;
+    content: '';
+    width: 600px;
+    height: 300px;
+    border-radius: 100px;
+    top: 5%;
+    right: 0;
+    z-index: -1;
+    transform: translateX(50%);
+    background-color: var(--just-blue);
+}
+
+.hero__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'description cover';
+    column-gap: 20px;
+}
+
+.cover {
+    width: 100%;
+    grid-area: cover;
+    align-self: center;
+}
+
+.cover img {
+    max-width: 100%;
+}
+
+.description {
+    grid-area: description;
+    align-self: center;
+}
+
+.main__title {
+    font-size: 45px;
+    text-transform: capitalize;
+}
+
+.details {
+    color:grey;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 20px 0;
+}
+
+.hero__buttons {
+    display: flex;
+    gap: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    .hero__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "cover"
+        "description";
+    }
+
+    .description {
+        text-align: center;
+    }
+
+    .hero__buttons {
+        justify-content: center;
+    }
+    
+}
+
+@media screen and (max-width: 460px) {
+    .hero::before {
+        width: 300px;
+        height: 170px;
+    }
+
+    
+}

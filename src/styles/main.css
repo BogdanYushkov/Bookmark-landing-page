@@ -1,0 +1,47 @@
+@import './components/header.css';
+@import './components/hero.css';
+@import './components/featured.css';
+@import './components/resources.css';
+@import './components/questions.css';
+@import './components/contact.css';
+@import './components/footer.css';
+@import './components/buttons.css';
+@import './components/nav.css';
+
+:root {
+    --bg-layer:rgba(36, 42, 69, 0.904);
+    --just-dark: #242a45;
+    --just-white: #fff;
+    --just-pink: #fa5959;
+    --just-blue: #5267df;
+    --soft-white: #f7f7f7;
+    --baseFont: 'Rubik', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--baseFont);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    max-width: 1184px;
+    margin: 0 auto;
+}
